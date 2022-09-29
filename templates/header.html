@@ -1,0 +1,41 @@
+  <header>
+
+
+    <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+   <label class="menu__btn" for="menu__toggle">
+    <span></span>
+  </label>
+  <div class="menu__box">
+    <div id="menu">
+    <!-- ------------------------------ -->
+    {% if session.logged_in %}
+      <h1 id="user">Welcome {{session.username}}</h1>
+    {% endif %}
+      <div id="navbar">
+    <a href="/" class="fas fa-home"> Главная</a>
+    <a href="/actors"> Актеры</a>
+    <a href="/history">История</a>
+      {% if session.logged_in %}
+        <a href="/logout" class="fa fa-sign-out"> Выйти</a>
+      {% else %}
+        <a href="/login" class="fa fa-sign-in"> Вход</a>
+        <a href="/regin" class="fa fa-sign-in"> Регистрация</a> 
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+      <navbar>
+        <a href="/">Главная</a>
+        <a href="/actors">Актеры</a>
+        <a href="/history">История</a>
+        {% if session.logged_in %}
+          <a href="/logout">Выйти</a>
+          <a href="/congrats">Поздравление</a>
+        {% else %}
+          <a href="/regin">Регистрация</a>
+          <a href="/login">Авторизация</a>
+        {% endif %}
+      </navbar>
+  </header>

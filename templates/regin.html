@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<content>
+  <div id="blockk">
+    <reg> 
+          <img id="sultan" src=""  alt="Avatar">
+    </reg>
+    <form name="myForm" method="POST" action="" onsubmit="return validateForm()" id="formreg">
+      <label for="username">Имя пользователя</label>
+      <input type="text" id="username" name="username">
+      <label for="email">Почта</label>
+      <input type="text" id="email" name="email">
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password">
+      <input type="submit" value="Зарегистрироваться"> 
+      <button id="links" onclick="myFunction()">Подробнее</button>
+      <p id="demo"></p>
+
+    </form>
+  </div>
+</content>
+{% endblock %}

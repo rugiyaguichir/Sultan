@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<content>
+  <div id="blockk">
+    <reg> 
+          <img id="sultan" src="{{url_for('static', filename='image/avatar.png')}}" alt="Avatar">
+    </reg>
+    <form name="myForm" method="POST" action="" onsubmit="return validateForm()" id="formreg">
+
+      {% if error %}
+        <h1 id="error">{{ error }}</h1>
+      {% endif %}
+      <label for="username">Имя пользователя</label>
+      <input type="text" id="username" name="username">
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password">
+      <input type="submit" value="Войти"> 
+    </form>
+  </div>
+</content>
+{% endblock %}
